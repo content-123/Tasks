@@ -1,0 +1,136 @@
+1.For the given JSON iterate over all for loops [taken rest countries API]
+ 
+ forin
+ 
+const xhr=new XMLHttpRequest()
+
+xhr.open("GET","https://restcountries.com/v3.1/all",true)
+xhr.send()
+xhr.onload=function()
+{
+     var data=JSON.parse(this.response)
+    console.log(data)
+     
+    
+for(var k in data){
+    const result =data[k].name.common
+    const result1=data[k].region
+    const result2=data[k].subregion
+    const result3=data[k].population
+    console.log(result,result1,result2,result3)
+}
+}
+
+
+foreach
+const xhr=new XMLHttpRequest()
+
+xhr.open("Get","https://restcountries.com/v3.1/all")
+
+xhr.send()
+
+xhr.onload=function foreach()
+{
+    var res=JSON.parse(this.response)
+    console.log(res)
+
+    res.forEach((op)=>
+    
+    {
+    console.log(op.region,op.population)
+    
+    }
+     )}
+
+forloop
+
+const xhr=new XMLHttpRequest()
+
+xhr.open("Get","https://restcountries.com/v3.1/all",true)
+
+xhr.send()
+
+xhr.onload=function forloop(){
+
+    var res=JSON.parse(this.response)
+    console.log(res)
+    for(let i=0;i<res.length;i++)
+    {
+        let op=res[i].population
+        console.log(i,op)
+    }
+}
+
+forof
+
+const xhr=new XMLHttpRequest()
+
+xhr.open("Get","https://restcountries.com/v3.1/all",true)
+
+xhr.send()
+xhr.onload= function forof()
+{
+    var res=JSON.parse(this.response)
+    console.log(res)
+     for (let j of res )
+     {
+        console.log(res[j].continents)
+     }
+}
+
+2.Create your own resume in JSON format
+
+let resume={
+    "name":"Keerthana",
+    "contact":
+     {
+      "E-mail ID":"keerthanakk10@gmail.com",
+      "Phone" :"9751877608"
+     }
+   "Professional Summary" :
+    
+        ["Software professional with 2 years of experience in domains like Insurance, Finance, Banking",
+        "Worked with Incident, Change, Configuration and Release management, and IT Infrastructure teams"]
+    
+ 
+  "Current Assignment":
+  {"GP STRATERGIES (IT Analyst)":{
+
+    "Role name":"Release and Configuration Engineer – 19-JUL-2021 – Till Date":
+    
+            
+      ["Define and agree release and deployment plans with customers/stakeholders",
+       "Ensure that each release package consists of a set of related assets and service components that are compatible with each other",
+       "Ensure that integrity of a release package and its constituent components is maintained throughout the transition activities and recorded accurately in the configuration management system",
+       "Ensure that all release and deployment packages can be tracked, installed, tested, verified, and/or uninstalled or backed out, if appropriate" , 
+       "Ensure that change is managed during the release and deployment activities",
+       " Record and manage deviations, risks, issues related to the new or changed service, and take necessary corrective action",
+       "Ensure that there is knowledge transfer to enable the customers and users to optimize their use of the service to support their business activities",
+       "Weekly change review meeting for planning of changes across all the facilities" ]
+    
+}
+  }
+ "CSS CORP PVT LTD":{
+
+ 
+ "Role Name": "Junior Analyst – 6 th July 2020 – 16 th July2021":
+    [ 
+    "Analyzing Incidents to identify service restoration actions to be taken",
+    "Create Incidents, problem, Service request tickets based on the request received from in the Technology helpdesk mailbox",
+    "Handle calls for various application password rests, SSO with Active Directory.",
+    "Performing Incident investigation diagnosis and resolution",
+    "Monitoring the status and progress towards resolution of assigned Incidents",
+    "Assisting with the fulfillment of Service Requests",
+    "Assisting with the detection and recording of possible Problems",
+    "Keeping affected business partners informed about progress",
+    " Escalating the process as necessary per established escalation policies",
+    "Provides basic support of telephony and UC systems"
+]
+ }
+
+ "Academic Profile":[
+    "Std X from SMHMS Kotagiri – 92.5%"
+    "Std XII from VVGHSS Tiruchengode – 93%"
+    "B.E ECE – SRIT Coimbatore – 82%"]
+
+}
